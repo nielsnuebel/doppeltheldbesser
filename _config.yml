@@ -23,3 +23,27 @@ sass:
   style: compressed
 
 repository: nielsnuebel/doppeltheldbesser
+
+
+# Site nav
+nav:
+
+- name: Gewinnspiel
+  link: "#Gameimg"
+  src: "images/Button_Gewinnspiel.png"
+
+- name: App
+  link: "#App"
+  src: "images/Button_App.png"
+
+- name: Video
+  link: "#Video"
+  src: "images/Button_Videos.png"
+
+- name: Games
+  link: "#Games"
+  src: "images/Button_Spiele.png"
+
+- name: Galerie
+  link: "#Galerie"
+  src: "images/Button_Helden.png"

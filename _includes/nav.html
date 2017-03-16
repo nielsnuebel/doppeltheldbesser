@@ -1,0 +1,7 @@
+<nav>
+        <ul>
+                {% for item in site.nav %}<li><a href="{{ item.link }}"><img src="{{ item.src }} " alt="{{ item.name }} "></a></li>
+                {% if item.name == "App" %}<li class="clearfix"></li>{% endif %}
+                {% endfor %}
+        </ul>
+</nav>

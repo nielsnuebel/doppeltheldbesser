@@ -1,3 +1,44 @@
 body {
-  background: blue;
+  background: url(../images/bg_kachel.png);
+}
+
+#wrapper {
+  margin: 0 auto;
+}
+
+img.fullwidth {
+  width: 100%;
+  display: block;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+nav {
+
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: 20px;
+
+      &.clearfix
+      {
+        padding: 0;
+        display: block;
+      }
+
+      img {
+        display: inline-block;
+        transition: transform 200ms; transform: scaleX(1) scaleY(1);
+
+        &:hover {
+          transform: scaleX(1.1) scaleY(1.1);
+        }
+      }
+    }
+  }
 }

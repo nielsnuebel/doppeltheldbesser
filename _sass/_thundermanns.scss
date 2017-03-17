@@ -85,7 +85,7 @@ div.sociallinks {
 div.gewinnspiel {
   margin-top: 15px;
 
-  h2 {
+  h2.strike {
     color: #24e135;
     font-family: 'futura';
     text-transform: uppercase;
@@ -126,6 +126,62 @@ div.gewinnspiel {
       max-width: 483px;
     }
   }
+
+  .row {
+    margin: 100px 15px;
+  }
+  .gameimages {
+    text-align: right;
+
+    img {
+      display: inline-block;
+    }
+  }
+  .gametext {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'futura';
+    text-transform: uppercase;
+    line-height: 1.2em;
+
+    h2 {
+      color: #24e135;
+      font-family: 'futura';
+      text-transform: uppercase;
+      text-shadow: 0 0 4px #24e135;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    p {
+      text-align: left;
+      margin-left: 0px;
+    }
+
+    ul.list {
+      background: url(../images/123.png) no-repeat top left;
+      min-height: 295px;
+      list-style: none;
+      padding-left: 80px;
+      position: relative;
+
+      li {
+        position: absolute;
+
+        &:nth-child(1n) {
+          top: 10px;
+        }
+        &:nth-child(2n) {
+          top: 130px;
+        }
+        &:nth-child(3n) {
+          top: 250px;
+        }
+
+      }
+    }
+
+  }
 }
 
 footer {
@@ -157,4 +213,20 @@ p {
   margin: 0px 50px;
   line-height: 1.2em;
   margin-top: 15px;
+}
+
+.row {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+.col-2-1 {
+  float: left;
+  width: 50%;
 }

@@ -7,6 +7,7 @@
             // replace #wrapper with element that contains
             // actual page content
             var height= document.getElementById('wrapper').offsetHeight;
+            console.log(height);
             parent.postMessage(height, '*');
         }
     }

@@ -128,10 +128,20 @@ div.gewinnspiel {
   }
 
   .row {
-    margin: 100px 15px;
+    margin: 100px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 960px;
   }
   .gameimages {
-    text-align: right;
+    text-align: center;
+    margin-top: 30px;
+
+    @media (min-width: 600px) {
+      text-align: right;
+      padding-left: 40px;
+      margin-top: 0;
+    }
 
     img {
       display: inline-block;
@@ -139,10 +149,11 @@ div.gewinnspiel {
   }
   .gametext {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'futura';
     text-transform: uppercase;
     line-height: 1.2em;
+    @media (min-width: 820px) {font-size: 18px;}
 
     h2 {
       color: #24e135;
@@ -151,11 +162,15 @@ div.gewinnspiel {
       text-shadow: 0 0 4px #24e135;
       font-size: 36px;
       font-weight: bold;
+      text-align: center;
+      @media (min-width: 600px) {text-align: left;}
     }
 
     p {
-      text-align: left;
-      margin-left: 0px;
+      margin: 20px 0 0 0;
+      font-size: 16px;
+      @media (min-width: 820px) {font-size: 18px;}
+      @media (min-width: 600px) {text-align: left; margin-top: 0;}
     }
 
     ul.list {
@@ -169,13 +184,21 @@ div.gewinnspiel {
         position: absolute;
 
         &:nth-child(1n) {
-          top: 10px;
+          top: 14px;
+          @media (min-width: 600px) {top: -2px;}
+          @media (min-width: 820px) {top: 3px;}
+          @media (min-width: 960px) {top: 14px;}
         }
         &:nth-child(2n) {
-          top: 130px;
+          top: 120px;
+          @media (min-width: 600px) {top: 100px;}
+          @media (min-width: 820px) {top: 110px;}
+          @media (min-width: 960px) {top: 119px;}
         }
         &:nth-child(3n) {
-          top: 250px;
+          top: 232px;
+          @media (min-width: 600px) {top: 232px;}
+          @media (min-width: 820px) {top: 241px;}
         }
 
       }
@@ -227,6 +250,8 @@ p {
   }
 }
 .col-2-1 {
-  float: left;
-  width: 50%;
+  @media (min-width: 600px) {
+    float: left;
+    width: 50%;
+  }
 }

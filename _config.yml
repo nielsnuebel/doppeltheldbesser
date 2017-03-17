@@ -17,7 +17,7 @@ googleanalyticss:  UA-123456789-1
 markdown: kramdown
 
 #Exclude Files or Folder
-exclude: [node_modules, gulpfile.js, package.json, bower_components, bower.json, Gemfile, Gemfile.lock, CNAME]
+exclude: [node_modules, gulpfile.js, package.json, bower_components, bower.json, Gemfile, Gemfile.lock, CNAME, iframe]
 sass:
   sass_dir: _sass
   style: compressed

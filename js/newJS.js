@@ -63,6 +63,14 @@ $(document).ready(function() {
     $( ".fifthvideo" ).click(function() {
         $( ".iframeWrap" ).replaceWith('<div class="iframeWrap"> <iframe width="100%" height="100%" src="http://www.nick.de/embed/?type=local_playlist&token=ce2d0010dca491e7d80e&mrss=http%3A%2F%2Fapi.mtvnn.com%2Fv2%2Fmrss.xml%3Furi%3Dmgid%3Asensei%3Avideo%3Amtvnn.com%3Alocal_playlist-ce2d0010dca491e7d80e&image=http://images.mtvnn.com/%2Fb80a1da4a0f9b32b4c8bfc9e8ddf57d63%2F640x" allowfullscreen frameborder="0"></iframe> </div>' );
     });
+
+    $('.w-lightbox-close').click(function() {
+        $('#kobra-contestWrap').hide();
+    });
+
+    $('.button').click(function() {
+        $('#kobra-contestWrap').css('display', 'block');
+    });
 });
 
 $(function() {

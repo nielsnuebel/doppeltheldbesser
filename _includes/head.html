@@ -1,4 +1,4 @@
-    <head>
+<head>
         <meta charset="utf-8">
 
         <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
@@ -16,5 +16,6 @@
 
 
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-    </head>
+        <meta content="http://www.mynickid.com" name="kobra:url" />
+        <meta content="4e6747423c75ce131700000f" name="kobra:id" />
+</head>

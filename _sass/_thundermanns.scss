@@ -17,12 +17,14 @@ body {
 
 #wrapper {
   margin: 0 auto;
+  max-width: 960px;
 }
 
 img.fullwidth {
   width: 100%;
   display: block;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -35,12 +37,14 @@ img {
     display: none !important;
   }
 }
+
 .hidden-xs {
   display: none;
   @media screen and (min-width: 599px) {
     display: block;
   }
 }
+
 nav {
   background-image: -webkit-linear-gradient(270deg, #000 29%, transparent);
   background-image: linear-gradient(180deg, #000 29%, transparent);
@@ -55,15 +59,15 @@ nav {
       display: inline-block;
       padding: 20px;
 
-      &.clearfix
-      {
+      &.clearfix {
         padding: 0;
         display: block;
       }
 
       img {
         display: inline-block;
-        transition: transform 200ms; transform: scaleX(1) scaleY(1);
+        transition: transform 200ms;
+        transform: scaleX(1) scaleY(1);
 
         &:hover {
           transform: scaleX(1.1) scaleY(1.1);
@@ -97,32 +101,32 @@ div.gewinnspiel {
     margin-bottom: 60px;
 
     &:after {
-      content:'';
+      content: '';
       position: absolute;
       z-index: -1;
       bottom: -36px;
       margin: 0 auto;
-      top:0;
-      left:0;
-      right:0;
+      top: 0;
+      left: 0;
+      right: 0;
       background: url(../images/streak_big.png) no-repeat bottom center;
-      -moz-background-size:100% 30px;
-      background-size:100% 30px;
+      -moz-background-size: 100% 30px;
+      background-size: 100% 30px;
       max-width: 639px;
     }
 
     &:before {
-      content:'';
+      content: '';
       position: absolute;
       z-index: -1;
       top: -37px;
       margin: 0 auto;
-      bottom:0;
-      left:0;
-      right:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       background: url(../images/streak_small.png) no-repeat top center;
-      -moz-background-size:100% 31px;
-      background-size:100% 31px;
+      -moz-background-size: 100% 31px;
+      background-size: 100% 31px;
       max-width: 483px;
     }
   }
@@ -153,7 +157,9 @@ div.gewinnspiel {
     font-family: 'futura';
     text-transform: uppercase;
     line-height: 1.2em;
-    @media (min-width: 820px) {font-size: 18px;}
+    @media (min-width: 820px) {
+      font-size: 18px;
+    }
 
     h2 {
       color: #24e135;
@@ -163,14 +169,21 @@ div.gewinnspiel {
       font-size: 36px;
       font-weight: bold;
       text-align: center;
-      @media (min-width: 600px) {text-align: left;}
+      @media (min-width: 600px) {
+        text-align: left;
+      }
     }
 
     p {
       margin: 20px 0 0 0;
       font-size: 16px;
-      @media (min-width: 820px) {font-size: 18px;}
-      @media (min-width: 600px) {text-align: left; margin-top: 0;}
+      @media (min-width: 820px) {
+        font-size: 18px;
+      }
+      @media (min-width: 600px) {
+        text-align: left;
+        margin-top: 0;
+      }
     }
 
     ul.list {
@@ -185,20 +198,36 @@ div.gewinnspiel {
 
         &:nth-child(1n) {
           top: 14px;
-          @media (min-width: 600px) {top: -2px;}
-          @media (min-width: 820px) {top: 3px;}
-          @media (min-width: 960px) {top: 14px;}
+          @media (min-width: 600px) {
+            top: -2px;
+          }
+          @media (min-width: 820px) {
+            top: 3px;
+          }
+          @media (min-width: 960px) {
+            top: 14px;
+          }
         }
         &:nth-child(2n) {
           top: 120px;
-          @media (min-width: 600px) {top: 100px;}
-          @media (min-width: 820px) {top: 110px;}
-          @media (min-width: 960px) {top: 119px;}
+          @media (min-width: 600px) {
+            top: 100px;
+          }
+          @media (min-width: 820px) {
+            top: 110px;
+          }
+          @media (min-width: 960px) {
+            top: 119px;
+          }
         }
         &:nth-child(3n) {
           top: 232px;
-          @media (min-width: 600px) {top: 232px;}
-          @media (min-width: 820px) {top: 241px;}
+          @media (min-width: 600px) {
+            top: 232px;
+          }
+          @media (min-width: 820px) {
+            top: 241px;
+          }
         }
 
       }
@@ -212,17 +241,17 @@ footer {
   margin-top: 40px;
 
   &:before {
-    content:'';
+    content: '';
     position: absolute;
     z-index: -1;
     top: -26px;
     margin: 0 auto;
-    bottom:0;
-    left:0;
-    right:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: url(../images/streak_big.png) no-repeat top center;
-    -moz-background-size:100% 30px;
-    background-size:100% 30px;
+    -moz-background-size: 100% 30px;
+    background-size: 100% 30px;
     max-width: 639px;
   }
 }
@@ -249,9 +278,216 @@ p {
     display: table;
   }
 }
+
 .col-2-1 {
   @media (min-width: 600px) {
     float: left;
     width: 50%;
   }
+}
+
+#Game {
+  h2 {
+    color: #24e135;
+    font-family: 'futura';
+    text-transform: uppercase;
+    text-shadow: 0 0 4px #24e135;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .tresorWrap {
+    position: relative;
+    width: 100%;
+    max-width: 908px;
+    margin: auto;
+    height: 100%;
+    max-height: 548px;
+  }
+}
+
+/*CSS For Game*/
+.again {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 60%;
+  height: 40%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 300;
+  display: none;
+
+}
+
+.droppable {
+  z-index: 200;
+}
+
+
+
+
+
+.tresor {
+  background: url(../images/tresorBG_desktop.png);
+  width: 908px;
+  height: 548px;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px
+}
+
+.lefticons {
+  margin-top: 58px;
+  margin-left: 10px;
+  position: absolute;
+  top: -3px;
+  left: 8px;
+  z-index: 3;
+}
+
+.lefticons img {
+  display: block;
+  margin-bottom: 14px
+}
+
+.righticons {
+  position: absolute;
+  top: -2px;
+  right: 17px;
+  z-index: 3
+}
+
+.righticons img {
+  display: block;
+  margin-bottom: 14px
+}
+
+.curtainLeft {
+  position: absolute;
+  top: 100px;
+  left: 166px;
+  background: url(../images/door_red_desktop.png);
+  width: 304px;
+  height: 375px;
+  z-index: 2
+}
+
+.curtainRight {
+  position: absolute;
+  top: 100px;
+  right: 160px;
+  background: url(../images/door_blue_desktop.png);
+  width: 304px;
+  height: 375px;
+  z-index: 2
+}
+
+.leftDropzone {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 230px;
+  left: 291px
+}
+
+.rightDropzone {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 228px;
+  right: 308px
+}
+
+.leftSuccess {
+  position: absolute;
+  top: 253px;
+  left: 225px;
+  z-index: 2;
+}
+
+.rightSuccess {
+  position: absolute;
+  top: 252px;
+  right: 187px;
+  z-index: 2
+}
+
+.greyLightRight {
+  background: url(../images/light_off.png) no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.greyLightLeft {
+  background: url(../images/light_off.png) no-repeat;
+  width: 100px;
+  height: 100px;
+}
+
+.greenLightRight {
+  background: url(../images/light_green.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+.greenLightLeft {
+  background: url(../images/light_green.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  display: none
+}
+
+.redLightRight {
+  background: url(../images/light_red.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  display: none
+}
+
+.redLightLeft {
+  background: url(../images/light_red.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  display: none
+}
+
+.content {
+  position: absolute;
+  top: 100px;
+  left: 160px;
+  background: url(../images/door_BG.png);
+  width: 615px;
+  height: 391px;
+}
+
+.contentTextWrap {
+  position: absolute;
+  width: 417px;
+  height: 342px;
+  background: url(../images/card_win.png);
+  top: -10px;
+  left: 80px
+}
+
+button {
+  position: absolute;
+  top: 267px;
+  left: 117px;
+  border-radius: 40px;
+  background: transparent;
+  width: 177px;
+  height: 50px;
+  border: 2px solid #000000;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'futura';
+  font-size: 24px;
+  cursor: pointer
 }

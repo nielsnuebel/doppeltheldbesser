@@ -85,6 +85,7 @@ h2.strike {
     background-size: 100% 31px;
     max-width: 483px;
   }
+}
 
 nav {
   background-image: -webkit-linear-gradient(270deg, #000 29%, transparent);
@@ -129,110 +130,110 @@ div.sociallinks {
 
 div.gewinnspiel {
   margin-top: 15px;
+}
+
+.row {
+  margin: 100px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 960px;
+}
+
+.gameimages {
+  text-align: center;
+  margin-top: 30px;
+
+  @media (min-width: 600px) {
+    text-align: right;
+    padding-left: 40px;
+    margin-top: 0;
   }
 
-  .row {
-    margin: 100px auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 960px;
+  img {
+    display: inline-block;
   }
-  .gameimages {
-    text-align: center;
-    margin-top: 30px;
+}
 
-    @media (min-width: 600px) {
-      text-align: right;
-      padding-left: 40px;
-      margin-top: 0;
-    }
-
-    img {
-      display: inline-block;
-    }
+.gametext {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'futura';
+  text-transform: uppercase;
+  line-height: 1.2em;
+  @media (min-width: 820px) {
+    font-size: 18px;
   }
-  .gametext {
-    color: #ffffff;
-    font-size: 16px;
+
+  h2 {
+    color: #24e135;
     font-family: 'futura';
     text-transform: uppercase;
-    line-height: 1.2em;
+    text-shadow: 0 0 4px #24e135;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    @media (min-width: 600px) {
+      text-align: left;
+    }
+  }
+
+  p {
+    margin: 20px 0 0 0;
+    font-size: 16px;
     @media (min-width: 820px) {
       font-size: 18px;
     }
-
-    h2 {
-      color: #24e135;
-      font-family: 'futura';
-      text-transform: uppercase;
-      text-shadow: 0 0 4px #24e135;
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      @media (min-width: 600px) {
-        text-align: left;
-      }
+    @media (min-width: 600px) {
+      text-align: left;
+      margin-top: 0;
     }
+  }
 
-    p {
-      margin: 20px 0 0 0;
-      font-size: 16px;
-      @media (min-width: 820px) {
-        font-size: 18px;
-      }
-      @media (min-width: 600px) {
-        text-align: left;
-        margin-top: 0;
-      }
-    }
+  ul.list {
+    background: url(../images/123.png) no-repeat top left;
+    min-height: 295px;
+    list-style: none;
+    padding-left: 80px;
+    position: relative;
 
-    ul.list {
-      background: url(../images/123.png) no-repeat top left;
-      min-height: 295px;
-      list-style: none;
-      padding-left: 80px;
-      position: relative;
+    li {
+      position: absolute;
 
-      li {
-        position: absolute;
-
-        &:nth-child(1n) {
+      &:nth-child(1n) {
+        top: 14px;
+        @media (min-width: 600px) {
+          top: -2px;
+        }
+        @media (min-width: 820px) {
+          top: 3px;
+        }
+        @media (min-width: 960px) {
           top: 14px;
-          @media (min-width: 600px) {
-            top: -2px;
-          }
-          @media (min-width: 820px) {
-            top: 3px;
-          }
-          @media (min-width: 960px) {
-            top: 14px;
-          }
         }
-        &:nth-child(2n) {
-          top: 120px;
-          @media (min-width: 600px) {
-            top: 100px;
-          }
-          @media (min-width: 820px) {
-            top: 110px;
-          }
-          @media (min-width: 960px) {
-            top: 119px;
-          }
-        }
-        &:nth-child(3n) {
-          top: 232px;
-          @media (min-width: 600px) {
-            top: 232px;
-          }
-          @media (min-width: 820px) {
-            top: 241px;
-          }
-        }
-
       }
-    }
+      &:nth-child(2n) {
+        top: 120px;
+        @media (min-width: 600px) {
+          top: 100px;
+        }
+        @media (min-width: 820px) {
+          top: 110px;
+        }
+        @media (min-width: 960px) {
+          top: 119px;
+        }
+      }
+      &:nth-child(3n) {
+        top: 232px;
+        @media (min-width: 600px) {
+          top: 232px;
+        }
+        @media (min-width: 820px) {
+          top: 241px;
+        }
+      }
 
+    }
   }
 }
 
@@ -327,10 +328,6 @@ p {
 .droppable {
   z-index: 200;
 }
-
-
-
-
 
 .tresor {
   background: url(../images/tresorBG_desktop.png);
@@ -523,8 +520,7 @@ button {
         }
       }
 
-      &:nth-child(odd)
-      {
+      &:nth-child(odd) {
         text-align: right;
         img {
           border: 5px solid #0000ff;
@@ -537,8 +533,7 @@ button {
           padding: 5px;
         }
       }
-      &:nth-child(even)
-      {
+      &:nth-child(even) {
         text-align: left;
 
         img {

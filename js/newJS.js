@@ -26,7 +26,7 @@ $(document).ready(function() {
         nextText: '<img src="images/arrow_right.png">'
     });
 
-    $('ul.slider3').bxSlider({
+    $('div.slider3').bxSlider({
         slideWidth: 200,
         minSlides: 2,
         maxSlides: 2,

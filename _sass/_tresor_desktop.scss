@@ -1,0 +1,633 @@
+@media (max-width: 720px)
+{
+  #Game {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    h2 {
+      color: #24e135;
+      font-family: 'futura';
+      text-transform: uppercase;
+      text-shadow: 0 0 4px #24e135;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .again {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 72%;
+      height: 33%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      z-index: 300;
+      display: none;
+    }
+
+    .droppable {
+      z-index: 200;
+    }
+
+    .tresorWrap {
+      position: relative;
+      width: 352px;
+      height: 448px;
+      margin: auto;
+      overflow: hidden;
+
+      .tresor {
+        background: url(../images/tresorBG_mobil.png);
+        width: 352px;
+        height: 448px;
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+      }
+
+      .lefticons {
+        position: absolute;
+        top: 58px;
+        left: 50px;
+        z-index: 3;
+
+        img {
+          display: block;
+          float: left;
+          width: 55px;
+          margin-right: 8px;
+        }
+      }
+
+      .righticons {
+        position: absolute;
+        top: 335px;
+        left: 50px;
+        z-index: 3;
+
+        img {
+          display: block;
+          float: left;
+          width: 55px;
+          margin-right: 8px;
+        }
+      }
+
+      /* Tuer Links ROT */
+      .curtainLeft {
+        position: absolute;
+        top: 130px;
+        left: 37px;
+        background: url(../images/door_red_mobil.png);
+        width: 161px;
+        height: 200px;
+        z-index: 2
+      }
+
+      /* Tuer Rechts Blau */
+      .curtainRight {
+        position: absolute;
+        top: 135px;
+        right: 17px;
+        background: url(../images/door_blue_mobil.png);
+        width: 161px;
+        height: 200px;
+        z-index: 2;
+      }
+
+      /* Platzierflaeche Links */
+      .leftDropzone {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        top: 195px;
+        left: 100px;
+      }
+
+      /* Platzierflaeche Rechts */
+      .rightDropzone {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        top: 195px;
+        left: 198px;
+      }
+
+      .leftSuccess {
+        position: absolute;
+        top: 209px;
+        left: 68px;
+        z-index: 2;
+
+        .greyLightLeft {
+          background: url(../images/light_off_mobil.png) no-repeat;
+          width: 28px;
+          height: 28px;
+        }
+
+        .greenLightLeft {
+          background: url(../images/light_green_mobil.png) no-repeat;
+          width: 28px;
+          height: 28px;
+          display: none
+        }
+
+        .redLightLeft {
+          background: url(../images/light_red_mobil.png) no-repeat;
+          width: 28px;
+          height: 28px;
+          display: none
+        }
+      }
+
+      .rightSuccess {
+        position: absolute;
+        top: 209px;
+        right: 60px;
+        z-index: 2;
+
+        .greyLightRight {
+          background: url(../images/light_off_mobil.png) no-repeat;
+          width: 28px;
+          height: 28px;
+        }
+
+        .greenLightRight {
+          background: url(../images/light_green_mobil.png) no-repeat;
+          width: 28px;
+          height: 28px;
+          display: none;
+        }
+
+        .redLightRight {
+          background: url(../images/light_red_mobil.png) no-repeat;
+          width: 28px;
+          height: 28px;
+          display: none
+        }
+      }
+
+      .content {
+        position: absolute;
+        top: 125px;
+        left: 40px;
+        background: url(../images/door_BG_mobil.png);
+        width: 351px;
+        height: 223px;
+
+        .contentTextWrap {
+          position: absolute;
+          width: 200px;
+          height: 164px;
+          background: url(../images/card_win_mobil.png);
+          top: 0px;
+          left: 40px;
+        }
+
+        button {
+          top: 125px;
+          left: 45px;
+          width: 108px;
+          height: 28px;
+          font-size: 16px;
+          position: absolute;
+          border-radius: 40px;
+          background: transparent;
+          border: 2px solid #000000;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: 'futura';
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 721px) and (max-width: 907px)
+{
+  #Game {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    h2 {
+      color: #24e135;
+      font-family: 'futura';
+      text-transform: uppercase;
+      text-shadow: 0 0 4px #24e135;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .again {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 55%;
+      height: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      z-index: 300;
+      display: none;
+    }
+
+    .droppable {
+      z-index: 200;
+    }
+
+    .tresorWrap {
+      position: relative;
+      width: 721px;
+      height: 435px;
+      margin: auto;
+      overflow: hidden;
+
+      .tresor {
+        background: url(../images/tresorBG_ipad.png);
+        width: 721px;
+        height: 435px;
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+      }
+
+      .lefticons {
+        position: absolute;
+        top: 42px;
+        left: 10px;
+        z-index: 3;
+
+        img {
+          display: block;
+          margin-bottom: 8px;
+          width: 82px;
+          height: 82px;
+        }
+      }
+
+      .righticons {
+        position: absolute;
+        top: 42px;
+        right: 14px;
+        z-index: 3;
+
+        img {
+          display: block;
+          margin-bottom: 8px;
+          width: 82px;
+          height: 82px;
+        }
+      }
+
+      /* Tuer Links ROT */
+      .curtainLeft {
+        position: absolute;
+        top: 75px;
+        left: 138px;
+        background: url(../images/door_red_ipad.png) no-repeat;
+        width: 243px;
+        height: 300px;
+        z-index: 2
+      }
+
+      /* Tuer Rechts Blau */
+      .curtainRight {
+        position: absolute;
+        top: 75px;
+        right: 138px;
+        background: url(../images/door_blue_ipad.png);
+        width: 243px;
+        height: 300px;
+        z-index: 2;
+      }
+
+      /* Platzierflaeche Links */
+      .leftDropzone {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 175px;
+        left: 236px;
+      }
+
+      /* Platzierflaeche Rechts */
+      .rightDropzone {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 175px;
+        right: 242px;
+      }
+
+      .leftSuccess {
+        position: absolute;
+        top: 201px;
+        left: 184px;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+
+        .greyLightLeft {
+          background: url(../images/light_off.png) no-repeat;
+          width: 50px;
+          height: 50px;
+        }
+
+        .greenLightLeft {
+          background: url(../images/light_green.png) no-repeat;
+          width: 50px;
+          height: 50px;
+          display: none
+        }
+
+        .redLightLeft {
+          background: url(../images/light_red.png) no-repeat;
+          width: 50px;
+          height: 50px;
+          display: none
+        }
+      }
+
+      .rightSuccess {
+        position: absolute;
+        top: 199px;
+        right: 188px;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+
+        .greyLightRight {
+          background: url(../images/light_off.png) no-repeat;
+          width: 50px;
+          height: 50px;
+        }
+
+        .greenLightRight {
+          background: url(../images/light_green.png) no-repeat;
+          width: 50px;
+          height: 50px;
+          display: none;
+        }
+
+        .redLightRight {
+          background: url(../images/light_red.png) no-repeat;
+          width: 50px;
+          height: 50px;
+          display: none
+        }
+      }
+
+      .content {
+        position: absolute;
+        top: 76px;
+        left: 138px;
+        background: url(../images/door_BG_ipad.png);
+        width: 494px;
+        height: 308px;
+
+        .contentTextWrap {
+          position: absolute;
+          width: 333px;
+          height: 274px;
+          background: url(../images/card_win_ipad.png);
+          top: 0px;
+          left: 80px;
+        }
+
+        button {
+          top: 215px;
+          left: 90px;
+          width: 145px;
+          height: 40px;
+          font-size: 24px;
+          border-radius: 40px;
+          background: transparent;
+          border: 2px solid #000000;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: 'futura';
+          cursor: pointer;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 908px)
+{
+  #Game {
+    h2 {
+      color: #24e135;
+      font-family: 'futura';
+      text-transform: uppercase;
+      text-shadow: 0 0 4px #24e135;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .again {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 55%;
+      height: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      z-index: 300;
+      display: none;
+    }
+
+    .droppable {
+      z-index: 200;
+    }
+
+    .tresorWrap {
+      position: relative;
+      width: 100%;
+      max-width: 908px;
+      margin: auto;
+      height: 548px;
+      max-height: 548px;
+
+      .tresor {
+        background: url(../images/tresorBG_desktop.png);
+        width: 908px;
+        height: 548px;
+        z-index: 2;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        overflow: hidden;
+      }
+
+      .lefticons {
+        margin-top: 58px;
+        margin-left: 10px;
+        position: absolute;
+        top: -3px;
+        left: 8px;
+        z-index: 3;
+
+        img {
+          display: block;
+          margin-bottom: 14px
+        }
+      }
+
+      .righticons {
+        position: absolute;
+        top: -2px;
+        right: 17px;
+        z-index: 3;
+        margin-top: 58px;
+
+        img {
+          display: block;
+          margin-bottom: 14px
+        }
+      }
+
+      /* Tuer Links ROT */
+      .curtainLeft {
+        position: absolute;
+        top: 100px;
+        left: 166px;
+        background: url(../images/door_red_desktop.png) no-repeat;
+        width: 304px;
+        height: 375px;
+        z-index: 2
+      }
+
+      /* Tuer Rechts Blau */
+      .curtainRight {
+        position: absolute;
+        top: 100px;
+        right: 160px;
+        background: url(../images/door_blue_desktop.png) no-repeat;
+        width: 304px;
+        height: 375px;
+        z-index: 2
+      }
+
+      /* Platzierflaeche Links */
+      .leftDropzone {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 230px;
+        left: 291px
+      }
+
+      /* Platzierflaeche Rechts */
+      .rightDropzone {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 228px;
+        right: 308px
+      }
+
+      .leftSuccess {
+        position: absolute;
+        top: 253px;
+        left: 225px;
+        z-index: 2;
+
+        .greyLightLeft {
+          background: url(../images/light_off.png) no-repeat;
+          width: 100px;
+          height: 100px;
+        }
+
+        .greenLightLeft {
+          background: url(../images/light_green.png) no-repeat;
+          width: 100px;
+          height: 100px;
+          display: none
+        }
+
+        .redLightLeft {
+          background: url(../images/light_red.png) no-repeat;
+          width: 100px;
+          height: 100px;
+          display: none
+        }
+      }
+
+      .rightSuccess {
+        position: absolute;
+        top: 252px;
+        right: 187px;
+        z-index: 2;
+
+        .greyLightRight {
+          background: url(../images/light_off.png) no-repeat;
+          width: 100px;
+          height: 100px;
+        }
+
+        .greenLightRight {
+          background: url(../images/light_green.png) no-repeat;
+          width: 100px;
+          height: 100px;
+          display: none;
+        }
+
+        .redLightRight {
+          background: url(../images/light_red.png) no-repeat;
+          width: 100px;
+          height: 100px;
+          display: none
+        }
+      }
+
+      .content {
+        position: absolute;
+        top: 100px;
+        left: 160px;
+        background: url(../images/door_BG.png);
+        width: 615px;
+        height: 391px;
+
+        .contentTextWrap {
+          position: absolute;
+          width: 417px;
+          height: 342px;
+          background: url(../images/card_win.png);
+          top: -10px;
+          left: 80px
+        }
+
+        button {
+          position: absolute;
+          top: 267px;
+          left: 117px;
+          border-radius: 40px;
+          background: transparent;
+          width: 177px;
+          height: 50px;
+          border: 2px solid #000000;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: 'futura';
+          font-size: 24px;
+          cursor: pointer
+        }
+      }
+    }
+  }
+}

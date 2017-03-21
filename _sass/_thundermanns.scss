@@ -187,6 +187,11 @@ ul.bxslider {
 body {
   background: url(../images/bg_kachel.png);
   padding-bottom: 50px;
+
+  @media (max-width: 355px) {
+    max-width: 355px;
+
+  }
 }
 
 #wrapper {
@@ -265,7 +270,6 @@ h2.strike {
 nav {
   background-image: -webkit-linear-gradient(270deg, #000 29%, transparent);
   background-image: linear-gradient(180deg, #000 29%, transparent);
-
   ul {
     list-style: none;
     text-align: center;

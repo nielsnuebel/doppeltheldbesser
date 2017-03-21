@@ -33,7 +33,7 @@ nav:
   src: "images/Button_Gewinnspiel.png"
 
 - name: App
-  link: "#App"
+  link: "#applinks"
   src: "images/Button_App.png"
 
 - name: Video

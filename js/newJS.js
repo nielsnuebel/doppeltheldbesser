@@ -56,7 +56,7 @@ $(document).ready(function() {
     });
 
 
-    $.getJSON('http://localhost:3000/458.json',
+    $.getJSON('http://www.nick.de/api/v1/mixed_playlists/458.json',
         function(data) {
         var first_video = data.first_video;
         video_data = data.videos;

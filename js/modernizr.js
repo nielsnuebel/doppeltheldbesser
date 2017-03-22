@@ -6,3 +6,4 @@
  * Custom tests
  */
 Modernizr.addTest('ios', /(ipod|iphone|ipad)/i.test(navigator.userAgent));
+Modernizr.addTest('android', /(Android|Blackberry)/i.test(navigator.userAgent));

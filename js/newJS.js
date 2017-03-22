@@ -26,6 +26,14 @@ $(document).ready(function() {
         nextText: '<img src="images/arrow_right.png">'
     });
 
+    $.getJSON("http://www.nick.de/api/v1/mixed_playlists/458.json", function (data) {
+        var items = [];
+        console.log('Test');
+        $.each(data, function (item) {
+            console.log(item);
+        });
+    });
+
     $('div.slider3').bxSlider({
         slideWidth: 200,
         minSlides: 2,

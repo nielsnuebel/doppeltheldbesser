@@ -30,6 +30,29 @@
     }
 
   }
+  .video_text {
+    margin-bottom: 20px;
+    .video_title {
+      color: #24e135;
+      font-family: 'futura';
+      text-transform: uppercase;
+      text-shadow: 0 0 4px #24e135;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+    }
+    .video_desc {
+      color: #ffffff;
+      font-size: 16px;
+      font-family: 'futura';
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0px 50px;
+      line-height: 1.2em;
+      margin-top: 15px;
+    }
+  }
   .videos {
     position: relative;
     padding: 0 55px;

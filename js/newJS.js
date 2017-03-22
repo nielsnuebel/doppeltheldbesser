@@ -1,4 +1,20 @@
+var video_data = null;
+
+function loadVideo(video) {
+    var src = 'http://www.nick.de/embed/?type=local_playlist&token=' + video.id + '&mrss=' + encodeURIComponent(video.mrss) + '&image=' + encodeURIComponent(video.preview_image_url);
+    $('.video_text .video_title').html(video.name);
+    $('.video_text .video_desc').html(video.description);
+    $('#video_player').attr('src', src);
+}
+
+function refreshIframe(index) {
+    loadVideo(video_data[index]);
+}
+
+
 $(document).ready(function() {
+
+
     $('ul.red').bxSlider({
 
         slideWidth: 300,
@@ -26,15 +42,7 @@ $(document).ready(function() {
         nextText: '<img src="images/arrow_right.png">'
     });
 
-    $.getJSON("http://www.nick.de/api/v1/mixed_playlists/458.json", function (data) {
-        var items = [];
-        console.log('Test');
-        $.each(data, function (item) {
-            console.log(item);
-        });
-    });
-
-    $('div.slider3').bxSlider({
+    var slider = $('div.slider3').bxSlider({
         slideWidth: 200,
         minSlides: 2,
         maxSlides: 2,
@@ -47,30 +55,22 @@ $(document).ready(function() {
         nextText: '<img src="images/arrow_right.png">'
     });
 
-    $( ".firstvideo" ).click(function() {
-        $( ".iframeWrap" ).replaceWith('<div class="iframeWrap"> <iframe width="100%" height="100%" src="http://www.nick.de/embed/?type=local_playlist&token=b18ca4370909a7d2fbc2&mrss=http%3A%2F%2Fapi.mtvnn.com%2Fv2%2Fmrss.xml%3Furi%3Dmgid%3Asensei%3Avideo%3Amtvnn.com%3Alocal_playlist-b18ca4370909a7d2fbc2&image=http://images.mtvnn.com/35ab6d2dffc79c629f68b51cd09e65993%2F640x" allowfullscreen frameborder="0"></iframe> </div>' );
-    });
+
+    $.getJSON('http://localhost:3000/458.json',
+        function(data) {
+        var first_video = data.first_video;
+        video_data = data.videos;
+        loadVideo(first_video);
+            var counter = 1;
+            $.each(video_data, function (index, value) {
+                $('.slider3').append("<div><a onClick=\"refreshIframe(" + index + "); var s=s_gi('rsid'); s.linkTrackVars='prop1'; s.linkTrackEvents='event1'; s.prop1='Video" + index +"'; s.events='event1'; s.tl(this,'o','Video" + index +"');\"><img src=\"" + value.preview_image_url + "\"></a></div>");
+            })
+            slider.reloadSlider();
+        });
 
 
 
-    $( ".secondvideo" ).click(function() {
-        $( ".iframeWrap" ).replaceWith('<div class="iframeWrap"> <iframe width="100%" height="100%" src="http://www.nick.de/embed/?type=local_playlist&token=d759b11cf72b273aa990&mrss=http%3A%2F%2Fapi.mtvnn.com%2Fv2%2Fmrss.xml%3Furi%3Dmgid%3Asensei%3Avideo%3Amtvnn.com%3Alocal_playlist-d759b11cf72b273aa990&image=http://images.mtvnn.com/35ab6d2dffc79c629f68b51cd09e65993%2F640x" allowfullscreen frameborder="0"></iframe> </div>' );
-    });
 
-    $( ".thirdvideo" ).click(function() {
-        $( ".iframeWrap" ).replaceWith('<div class="iframeWrap"> <iframe width="100%" height="100%" src="http://www.nick.de/embed/?type=local_playlist&token=9614f44fea50bcf746f5&mrss=http%3A%2F%2Fapi.mtvnn.com%2Fv2%2Fmrss.xml%3Furi%3Dmgid%3Asensei%3Avideo%3Amtvnn.com%3Alocal_playlist-9614f44fea50bcf746f5&image=http://images.mtvnn.com/%2F2cd2ff48fc75c9a1fe486cb94fe076950%2F640x" allowfullscreen frameborder="0"></iframe> </div>' );
-    });
-
-
-
-
-    $( ".fourthvideo" ).click(function() {
-        $( ".iframeWrap" ).replaceWith('<div class="iframeWrap"> <iframe width="100%" height="100%" src="http://www.nick.de/embed/?type=local_playlist&token=2fd3388033f7f613f2cf&mrss=http%3A%2F%2Fapi.mtvnn.com%2Fv2%2Fmrss.xml%3Furi%3Dmgid%3Asensei%3Avideo%3Amtvnn.com%3Alocal_playlist-2fd3388033f7f613f2cf&image=http://images.mtvnn.com/%2F855609467428259eb28f076b67bf0b570%2F640x" allowfullscreen frameborder="0"></iframe> </div>' );
-    });
-
-    $( ".fifthvideo" ).click(function() {
-        $( ".iframeWrap" ).replaceWith('<div class="iframeWrap"> <iframe width="100%" height="100%" src="http://www.nick.de/embed/?type=local_playlist&token=ce2d0010dca491e7d80e&mrss=http%3A%2F%2Fapi.mtvnn.com%2Fv2%2Fmrss.xml%3Furi%3Dmgid%3Asensei%3Avideo%3Amtvnn.com%3Alocal_playlist-ce2d0010dca491e7d80e&image=http://images.mtvnn.com/%2Fb80a1da4a0f9b32b4c8bfc9e8ddf57d63%2F640x" allowfullscreen frameborder="0"></iframe> </div>' );
-    });
 
     $('.w-lightbox-close').click(function() {
         $('#kobra-contestWrap').hide();
